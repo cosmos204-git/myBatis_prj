@@ -50,7 +50,7 @@ where		empno=#{ empno }
 select		empno, ename, job, sal, hiredate, mgr, deptno, 
 			to_char(hiredate,'yyyy-mm-dd hh24') strHiredate
 from 		emp
-where		deptno=#{ deptno }
+where		deptno=#{deptno}
 </select>   
 
 

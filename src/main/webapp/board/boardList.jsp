@@ -1,5 +1,5 @@
 <%@page import="kr.co.sist.board.BoardService"%>
-<%@page import="kr.co.sist.board.BoardDTO"%>
+<%@page import="kr.co.sist.board.BoardDomain"%>
 <%@page import="java.util.List"%>
 <%@page import="kr.co.sist.board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -163,7 +163,7 @@ function checkLogin(){
 					rDTO.setEndNum(endNum);
 					
 					//6. 시작번호와 끝 번호사이에 해당하는 게시글을 조회
-					List<BoardDTO> boardList=bs.searchBoardList(rDTO);
+					List<BoardDomain> boardList=bs.searchBoardList(rDTO);
 					//글 제목이 20글자를 초과하면 19자까지만 보여주고 나머지는 ...으로 처리.
 					bs.titleSubStr( boardList );
 					rDTO.setUrl("boardList.jsp");

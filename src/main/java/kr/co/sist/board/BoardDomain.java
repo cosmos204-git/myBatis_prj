@@ -12,7 +12,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor 
 @AllArgsConstructor
-public class BoardDTO {
+public class BoardDomain {
 	private int num, cnt; 
 	private String title, content, ip, id;
 	private Date input_date;
